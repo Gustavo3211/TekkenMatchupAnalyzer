@@ -12,7 +12,7 @@ This is a simple web application built with Python and Eel to analyze matchups i
 
 
 
-## How to use without using the builds compiled by me:
+## How to use without the builds compiled by me:
 (in case the .exe doesnt work you can compile or run the py files)
 
 1. Clone this repository to your local machine.
