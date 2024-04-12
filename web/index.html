@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tekken Matchup Analyzer </title>
+    <link rel="icon" type="image/x-icon" href="fav.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript">
+            function search() {
+                var url = document.getElementById('url').value;
+                eel.search_profile(url)(function(results) {
+                    document.getElementById('results').innerHTML = results;
+
+                    // Get all the rows in the table with the 'winrate' class
+                    var rows = document.querySelectorAll('#results table.winrate tr');
+
+                    // Loop through each row
+                    for (var i = 0; i < rows.length; i++) {
+                        // Get the last cell in the row
+                        var cell = rows[i].lastElementChild;
+
+                        // Check if the cell contains a percentage
+                        if (cell.textContent.includes('%')) {
+                            // Get the numeric value of the percentage
+                            var percentage = parseFloat(cell.textContent);
+
+                            // Add the 'table-success' class if the percentage is 100
+                            if (percentage == 100) {
+                                rows[i].classList.add('table-success');
+                                rows[i].classList.add('text-dark');
+                            }
+                            // Add the 'table-danger' class if the percentage is 0
+                            else if (percentage == 0) {
+                                rows[i].classList.add('table-danger');
+                                rows[i].classList.add('text-dark');
+                            }
+                            else if (percentage == 50){
+                                rows[i].classList.add('table-warning');
+                                rows[i].classList.add('text-dark');
+
+                            }
+                        }
+                    }
+                });
+            }
+            function close_window() {
+                window.close()
+            }
+
+
+    </script>
+</head>
+<body class="bg-dark text-white">
+
+    <div class="container">
+        <h1 class="text-center">Tekken Matchup Analyzer</h1>
+
+        <div class="form-group">
+            <label for="url">Insert the profile link (example: https://wank.wavu.wiki/player/3MBafyQTTbny)</label>
+            <input type="text" class="form-control" id="url" required>
+        </div>
+        <div class="container d-flex justify-content-center"><button onclick="search()" class="btn btn-primary"><i class="bi bi-search"> </i>Search </i></button></div>     
+
+        <div id="results"></div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+
+<footer><div class="container d-flex justify-content-center mt-2"><button onclick="close_window()" class="btn btn-danger">Close App</button></footer>
+</body>
+</html>
