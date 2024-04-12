@@ -7,7 +7,7 @@ print("....STARTING GUI")
 print("GO TO YOUR BROWSER!")
 print("remember to close the browser window before the the console's one")
 
-print("Thanks for @6weetbix (https://twitter.com/6weetbix) for making wavu.wank.wiki")
+print("Thanks for @6weetbix (https://twitter.com/6weetbix) for making wank.wavu.wiki")
 
 eel.init('web')
 
