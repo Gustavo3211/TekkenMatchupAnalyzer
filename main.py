@@ -1,13 +1,22 @@
 import eel
 import search
 
-# Initialize the Eel app with the location of your web files
+
+print("....STARTING GUI")
+
+print("GO TO YOUR BROWSER!")
+print("remember to close the browser window before the the console's one")
+
+print("Thanks for @6weetbix (https://twitter.com/6weetbix) for making wavu.wank.wiki")
+
 eel.init('web')
 
 @eel.expose
 def on_close(page, sockets):
+
     print(page, 'closed')
-    print('Remaining open sockets:', sockets)
+    print('the app is now closed!', sockets)
+    print("you can now close this window")
 
 
 @eel.expose

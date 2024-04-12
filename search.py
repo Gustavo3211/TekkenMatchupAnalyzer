@@ -73,7 +73,7 @@ def search(url):
         if names.text != "Wavu Wank":
             result_html += '<div class="container">'
             result_html += '<h2 class="mt-4">URL: ' + url + '</h2>'
-            result_html += '<h2 class="text-danger">Note: If your link includes a character name at the end, it will display the win rate and related information for that specific character. Otherwise, it will provide information based on the highest rated character.</h2>'
+            result_html += '<h2 class="no-capture text-danger">Note: If your link includes a character name at the end, it will display the win rate and related information for that specific character. Otherwise, it will provide information based on the highest rated character.</h2>'
             result_html += '<h2 class="mt-4">'+ number_data.string +' </h2>'
             result_html += '<h3 class="mt-4">Player: ' + names.text.strip() + '</h3>'
 
@@ -94,10 +94,4 @@ def search(url):
             result_html += '</div>'
 
     return result_html
-
-
-
-
-
-
 
