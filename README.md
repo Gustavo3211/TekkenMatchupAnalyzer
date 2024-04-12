@@ -1,7 +1,7 @@
 (if you are on Linux it works with WINE!!!)
 # Tekken Matchup Analyzer
 
-This is a simple web application built with Python and Eel to analyze matchups in the game Tekken. It fetches data from player profiles on the [Wavu Wank](https://wank.wavu.wiki) website and provides insights into win/loss records against different characters.
+This is a simple web application built with Python and Eel to analyze matchups in the game Tekken. It fetches data from player profiles on the Wavu Wank(https://wank.wavu.wiki) website and provides insights into win/loss records against different characters.
 
 ## How to use without using the builds compiled by me:
 (in case the .exe doesnt work you can compile or run the py files)
@@ -16,4 +16,4 @@ This is a simple web application built with Python and Eel to analyze matchups i
 
 ## Credits
 
-- The website [Wavu Wank](https://wank.wavu.wiki) is the source of the data used in this application. Special thanks to @6weetbix (https://twitter.com/6weetbix) for creating and maintaining the site.
+- The website Wavu Wank(https://wank.wavu.wiki) is the source of the data used in this application. Special thanks to @6weetbix (https://twitter.com/6weetbix) for creating and maintaining the site.
