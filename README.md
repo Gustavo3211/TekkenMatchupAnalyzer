@@ -3,6 +3,15 @@
 
 This is a simple web application built with Python and Eel to analyze matchups in the game Tekken. It fetches data from player profiles on the Wavu Wank(https://wank.wavu.wiki) website and provides insights into win/loss records against different characters.
 
+
+<p align="center">
+  <img src="https://i.ibb.co/ts5NBML/Screenshot-20240412-193559.png" width="350" title="hover text">
+  <img src="https://i.ibb.co/0nHGJmS/Screenshot-20240412-194128.png" width="350" alt="accessibility text">
+</p>
+
+
+
+
 ## How to use without using the builds compiled by me:
 (in case the .exe doesnt work you can compile or run the py files)
 
