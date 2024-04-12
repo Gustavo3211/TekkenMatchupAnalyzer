@@ -76,7 +76,6 @@ def search(url):
             result_html += '<h2 class="text-danger">Note: If your link includes a character name at the end, it will display the win rate and related information for that specific character. Otherwise, it will provide information based on the highest rated character.</h2>'
             result_html += '<h2 class="mt-4">'+ number_data.string +' </h2>'
             result_html += '<h3 class="mt-4">Player: ' + names.text.strip() + '</h3>'
-            result_html += '<h3>Main Character(Highest Rating): ' + mainchar.text.strip() + '</h3>'
 
             winloses, winrate = replaytable(url) 
 
