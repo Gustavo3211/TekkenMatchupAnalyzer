@@ -14,4 +14,4 @@ This is a simple web application built with Python and Eel to analyze matchups i
 
 ## Credits
 
-- The website [Wavu Wank](https://wank.wavu.wiki) is the source of the data used in this application. Special thanks to @6weetbix for creating and maintaining the site.
+- The website [Wavu Wank](https://wank.wavu.wiki) is the source of the data used in this application. Special thanks to @6weetbix (https://twitter.com/6weetbix) for creating and maintaining the site.
