@@ -8,7 +8,7 @@ This is a simple web application built with Python and Eel to analyze matchups i
 
 1. Clone this repository to your local machine.
 2. Ensure you have Python installed.
-3. Install the required dependencies by running `pip install -r requirements.txt`.
+3. Install the required dependencies by running `pip install -r requirements.txt`. (MAKE SURE TO USE PYTHON 3.11.8)
 4. Run the main.py script using Python.
 5. Open your web browser.
 6. Enter the profile link of a Tekken player from the Wavu Wank website.
