@@ -8,67 +8,85 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
     <script type="text/javascript" src="/eel.js"></script>
     <script type="text/javascript">
-            function search() {
-                var url = document.getElementById('url').value;
-                eel.search_profile(url)(function(results) {
-                    document.getElementById('results').innerHTML = results;
-
-                    // Get all the rows in the table with the 'winrate' class
-                    var rows = document.querySelectorAll('#results table.winrate tr');
-
-                    // Loop through each row
-                    for (var i = 0; i < rows.length; i++) {
-                        // Get the last cell in the row
-                        var cell = rows[i].lastElementChild;
-
-                        // Check if the cell contains a percentage
-                        if (cell.textContent.includes('%')) {
-                            // Get the numeric value of the percentage
-                            var percentage = parseFloat(cell.textContent);
-
-                            // Add the 'table-success' class if the percentage is 100
-                            if (percentage == 100) {
-                                rows[i].classList.add('table-success');
-                                rows[i].classList.add('text-dark');
-                            }
-                            // Add the 'table-danger' class if the percentage is 0
-                            else if (percentage == 0) {
-                                rows[i].classList.add('table-danger');
-                                rows[i].classList.add('text-dark');
-                            }
-                            else if (percentage == 50){
-                                rows[i].classList.add('table-warning');
-                                rows[i].classList.add('text-dark');
-
-                            }
+        function search() {
+            var url = document.getElementById('url').value;
+            eel.search_profile(url)(function(results) {
+                document.getElementById('results').innerHTML = results;
+    
+                // Get all the rows in the table with the 'winrate' class
+                var rows = document.querySelectorAll('#results table.winrate tr');
+    
+                // Loop through each row
+                for (var i = 0; i < rows.length; i++) {
+                    // Get the last cell in the row
+                    var cell = rows[i].lastElementChild;
+    
+                    // Check if the cell contains a percentage
+                    if (cell.textContent.includes('%')) {
+                        // Get the numeric value of the percentage
+                        var percentage = parseFloat(cell.textContent);
+    
+                        // Add the 'table-success' class if the percentage is 100
+                        if (percentage == 100) {
+                            rows[i].classList.add('table-success');
+                            rows[i].classList.add('text-dark');
+                        }
+                        // Add the 'table-danger' class if the percentage is 0
+                        else if (percentage == 0) {
+                            rows[i].classList.add('table-danger');
+                            rows[i].classList.add('text-dark');
+                        }
+                        else if (percentage == 50){
+                            rows[i].classList.add('table-warning');
+                            rows[i].classList.add('text-dark');
                         }
                     }
-                });
-            }
-            function close_window() {
-                window.close()
-            }
-                    function captureScreen() {
+                }
+    
+                // Get all the rows in the table with the 'gamenumber' class
+                var gamenumberRows = document.querySelectorAll('#results table.gamenumber tr');
+    
+                // Loop through each row
+                for (var i = 0; i < gamenumberRows.length; i++) {
+                    // Get the last cell in the row
+                    var cell = gamenumberRows[i].lastElementChild;
+    
+                    // Get the numeric value of the cell
+                    var number = parseInt(cell.textContent);
+    
+                    // Add the 'table-danger' and 'text-dark' classes if the number is less than 10
+                    if (number < 10) {
+                        gamenumberRows[i].classList.add('table-danger');
+                        gamenumberRows[i].classList.add('text-dark');
+                    }
+                }
+            });
+        }
+    
+        function close_window() {
+            window.close()
+        }
+    
+        function captureScreen() {
             var elements = document.getElementsByClassName('no-capture');
             for (var i = 0; i < elements.length; i++) {
                 elements[i].style.display = 'none';
             }
-
+    
             html2canvas(document.body).then(function (canvas) {
                 var a = document.createElement("a");
                 a.href = canvas.toDataURL("image/png");
                 a.download = "share.png"; 
                 a.click();
-
+    
                 for (var i = 0; i < elements.length; i++) {
                     elements[i].style.display = '';
                 }
             });
         }
-
-
-
     </script>
+    
+    
 </head>
 <body class="bg-dark text-white">
 
