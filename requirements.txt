@@ -1,4 +1,4 @@
 eel==0.14.0
 beautifulsoup4==4.9.3
-requests==2.25.1
+requests==2.32.2
 pandas==1.2.4
